@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 68" width="196" height="68">
+  <!-- Texto "Linkd" em branco -->
+  <text x="6" y="51" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="52" fill="#FFFFFF" letter-spacing="-1.5">Linkd</text>
+  
+  <!-- Grupo do ícone [in] aproximado -->
+  <g transform="translate(-10, 0)">
+    <!-- Quadrado azul arredondado -->
+    <rect x="148" y="8" width="52" height="52" rx="7" fill="#0A66C2" />
+    
+    <!-- Letra "i" -->
+    <circle cx="163.5" cy="21.5" r="4.2" fill="#FFFFFF" />
+    <rect x="159.8" y="29" width="7.4" height="22" fill="#FFFFFF" />
+    
+    <!-- Letra "n" -->
+    <path d="M172.5 29h7v3c1-1.8 3.2-3.5 6.8-3.5 6.5 0 8.7 4.2 8.7 10.2V51h-7.4V40c0-3.2-.8-5.3-3.9-5.3-2.5 0-3.8 1.7-4.3 3.4-.2.6-.2 1.4-.2 2.2V51h-7.4V29z" fill="#FFFFFF" />
+  </g>
+</svg>
