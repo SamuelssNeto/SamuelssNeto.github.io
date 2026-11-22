@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel S. S. Neto | Cibersegurança &amp; Desenvolvimento Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet" />
     <style>
         :root {
             --bg: #0b0f14;
@@ -223,6 +228,10 @@
             filter: brightness(0) invert(1);
         }
 
+        .section-icon--project {
+            filter: none;
+        }
+
         .btn-icon {
             width: 28px;
             height: 28px;
@@ -237,7 +246,7 @@
         /* Grids e Cards */
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
         }
 
@@ -258,8 +267,7 @@
         }
 
         .card.card-compact {
-            zoom: 0.667;
-            min-height: var(--card-natural-height);
+            min-height: 217px;
         }
 
         .card:hover {
@@ -332,6 +340,241 @@
             padding: 8px;
         }
 
+        .trail-card-header {
+            display: grid;
+            grid-template-columns: 30px minmax(0, 1fr);
+            align-items: center;
+            gap: 6px;
+            width: 100%;
+            min-height: 46px;
+        }
+
+        .trail-card-header--dio {
+            grid-template-columns: 60px minmax(0, 1fr);
+        }
+
+        .trail-card-header--freecodecamp {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .trail-card-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .trail-card-logo--santander {
+            width: 30px;
+            height: 30px;
+        }
+
+        .trail-card-logo--freecodecamp {
+            width: 34.5px;
+            height: 34.5px;
+        }
+
+        .trail-card-logo--dio {
+            width: 60px;
+            height: 60px;
+        }
+
+        .trail-card-logo--freecodecamp {
+            filter: brightness(0) invert(1);
+        }
+
+        .trail-card-name {
+            color: var(--text);
+            font-size: 1.05rem;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .trail-card-name--santander {
+            font-family: "Fira Sans", "Open Sans", sans-serif;
+            white-space: nowrap;
+        }
+
+        .trail-card-name--santander .santander-name {
+            color: #ea1d25;
+            font-weight: 500;
+        }
+
+        .trail-card-name--santander .santander-divider {
+            color: var(--muted);
+            font-weight: 300;
+        }
+
+        .trail-card-name--santander .academy-name {
+            color: var(--muted);
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+        }
+
+        .trail-card-name--freecodecamp {
+            font-family: "SaxMono", "Courier New", monospace;
+            font-weight: 300;
+            letter-spacing: -0.04em;
+            transform: translateY(3px);
+        }
+
+        .trail-card-name--santander {
+            font-size: 1.5rem;
+        }
+
+        .trail-card-name--dio {
+            font-size: 1.5rem;
+            font-weight: 375;
+            transform: none;
+        }
+
+        .trail-card-name--freecodecamp {
+            font-size: 1.77rem;
+        }
+
+        .trail-card-link {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-right: 54px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .trail-card-arrow-link {
+            position: absolute;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .trail-card-arrow {
+            width: 14px;
+            height: 14px;
+            filter: brightness(0) saturate(100%) invert(55%) sepia(48%) saturate(754%) hue-rotate(126deg);
+            animation: stackArrowWave 1.5s infinite ease-in-out;
+        }
+
+        .trail-card-arrow-link:hover,
+        .trail-card-arrow-link:focus-visible {
+            border-color: var(--accent);
+            background: var(--surface-hover);
+        }
+
+        .trail-card-arrow-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .project-card-header {
+            display: grid;
+            grid-template-columns: 30px minmax(0, 1fr);
+            align-items: center;
+            gap: 6px;
+            width: 100%;
+            min-height: 46px;
+            padding: 8px;
+        }
+
+        .project-card-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .project-card-name {
+            margin: 0;
+            color: var(--text);
+            font-size: 1.35rem;
+            line-height: 1.1;
+        }
+
+        .project-card-link {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-right: 54px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #trilhas .card {
+            position: relative;
+            padding: 18px;
+        }
+
+        #trilhas .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        #trilhas .card.card-compact {
+            height: 46px;
+            min-height: 46px;
+            max-height: 46px;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        #trilhas .trail-card-header {
+            min-height: 46px;
+            padding: 8px;
+        }
+
+        #trilhas .detail-links {
+            margin: 14px 0 0;
+        }
+
+        #competencias .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        #competencias .grid-3 .card {
+            display: grid;
+            grid-template-columns: 40px minmax(0, 1fr);
+            align-items: center;
+            column-gap: 12px;
+        }
+
+        #competencias .grid-3 .card-icon {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            margin: 0;
+        }
+
+        #competencias .grid-3 .card h4,
+        #competencias .grid-3 .card p {
+            grid-column: 2;
+        }
+
+        #competencias .grid-3 .card h4 {
+            margin: 0;
+        }
+
+        #projetos .card {
+            position: relative;
+            height: 46px;
+            min-height: 46px;
+            max-height: 46px;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        #projetos .project-card-name {
+            font-size: 1.5rem;
+        }
+
         .stack-card-logo {
             grid-column: 1;
             grid-row: 1;
@@ -339,6 +582,28 @@
             width: 30px;
             height: 30px;
             object-fit: contain;
+        }
+
+        .stack-card-logo--kali {
+            flex-basis: 40px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .stack-card-logo--cybersecurity {
+            flex-basis: 33px;
+            width: 33px;
+            height: 33px;
+        }
+
+        .stack-card-header--kali {
+            grid-template-columns: 40px auto;
+            column-gap: 10px;
+        }
+
+        .stack-card-header--kali>.stack-card-logo,
+        .stack-card-header--kali>h4 {
+            transform: translateY(-4px);
         }
 
         .stack-card-header h4 {
@@ -358,7 +623,7 @@
             display: inline-flex;
             align-items: baseline;
             flex-wrap: wrap;
-            column-gap: 5px;
+            column-gap: 30px;
             font-family: "Segoe UI", system-ui, sans-serif;
             font-weight: 700;
         }
@@ -402,10 +667,11 @@
         .stack-card-hard-skills {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
+            flex-direction: row-reverse;
+            gap: 6px;
             color: var(--muted);
             font-family: "Segoe UI", system-ui, sans-serif;
-            font-size: 0.55em;
+            font-size: 1rem;
             font-weight: 400;
             letter-spacing: 0.04em;
             white-space: nowrap;
@@ -413,11 +679,39 @@
             transition: color 0.2s;
         }
 
-        .stack-card-arrow-icon {
-            width: 12px;
-            height: 12px;
-            flex: 0 0 12px;
+        .stack-card-arrow {
+            width: 21px;
+            height: 21px;
+            flex: 0 0 21px;
             object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(55%) sepia(48%) saturate(754%) hue-rotate(126deg);
+            animation: stackArrowWave 1.5s infinite ease-in-out;
+        }
+
+        @keyframes stackArrowWave {
+
+            0%,
+            100% {
+                opacity: 0.25;
+                filter: brightness(0) saturate(100%) invert(55%) sepia(48%) saturate(754%) hue-rotate(126deg);
+            }
+
+            35% {
+                opacity: 1;
+                filter: brightness(0) saturate(100%) invert(55%) sepia(48%) saturate(754%) hue-rotate(126deg) drop-shadow(0 0 4px var(--accent));
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .stack-card-arrow {
+                animation: none;
+                opacity: 1;
+            }
+
+            .trail-card-arrow {
+                animation: none;
+                opacity: 1;
+            }
         }
 
         .stack-card-link:hover .stack-card-hard-skills,
@@ -453,7 +747,16 @@
         #stacks .card {
             width: max-content;
             max-width: 100%;
+            height: 46px;
+            min-height: 46px;
+            max-height: 46px;
             padding: 0;
+        }
+
+        #stacks .stack-card-header {
+            height: 46px;
+            min-height: 46px;
+            max-height: 46px;
         }
 
         #stacks .card.card-compact {
@@ -469,6 +772,71 @@
         #stacks .grid-3 {
             grid-template-columns: repeat(3, max-content);
             justify-content: start;
+        }
+
+        .stack-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: -6px 0 22px;
+        }
+
+        .stack-legend-item {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            padding: 4px 0;
+            border: 0;
+            border-radius: 0;
+            color: var(--legend-color);
+            background: transparent;
+            font-family: Roboto, "Segoe UI", sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .stack-category-sistemas {
+            --category-color: #edba32;
+        }
+
+        .stack-category-ciberseguranca {
+            --category-color: #70a6df;
+        }
+
+        .stack-category-front-end {
+            --category-color: #e34f26;
+        }
+
+        .stack-legend-item.stack-category-sistemas,
+        #stacks .stack-category-sistemas {
+            --legend-color: #edba32;
+        }
+
+        .stack-legend-item.stack-category-ciberseguranca,
+        #stacks .stack-category-ciberseguranca {
+            --legend-color: #70a6df;
+        }
+
+        .stack-legend-item.stack-category-front-end,
+        #stacks .stack-category-front-end {
+            --legend-color: #e34f26;
+        }
+
+        #stacks .stack-category-sistemas,
+        #stacks .stack-category-ciberseguranca,
+        #stacks .stack-category-front-end {
+            border-color: var(--legend-color);
+        }
+
+        #stacks .stack-category-sistemas .stack-card-hard-skills,
+        #stacks .stack-category-ciberseguranca .stack-card-hard-skills,
+        #stacks .stack-category-front-end .stack-card-hard-skills {
+            color: var(--legend-color);
+        }
+
+        #stacks .stack-card-link:hover .stack-card-hard-skills,
+        #stacks .stack-card-link:focus-visible .stack-card-hard-skills {
+            color: var(--accent);
         }
 
         /* Formação & EdTechs */
@@ -623,6 +991,17 @@
             padding: 8px;
         }
 
+        .contact-actions .btn-contact--linkedin {
+            width: 96px;
+        }
+
+        .btn-icon-linkedin {
+            width: 78px;
+            height: 28px;
+            flex: 0 0 78px;
+            object-fit: contain;
+        }
+
         .btn-contact {
             display: inline-flex;
             align-items: center;
@@ -728,6 +1107,18 @@
             .contact-box {
                 align-items: flex-start;
             }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            #trilhas .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .card.card-compact {
+                min-height: 0;
+            }
         }
     </style>
 </head>
@@ -778,14 +1169,18 @@
                     Tenho formação em Licenciatura em Ciências Sociais pela
                     <strong>Universidade Estadual de Londrina (UEL)</strong> e Bacharelado em Teologia pelo
                     <strong>Instituto Bíblico Maranata (IBM)</strong> e pela
-                    <strong>Universidade Presbiteriana Mackenzie</strong>.
+                    <strong>Universidade Presbiteriana Mackenzie</strong>. Areas nas quais
+                    atuei como prefessor, educador social e voluntário em projeto confecional e socialeducacional.
                 </p>
 
                 <p>
                     Atualmente, dedico-me à profissionalização autodidata em tecnologia, com formações e trilhas
-                    oferecidas pela <strong>Santander Open Academy</strong>,
+                    oferecidas por <strong>Santander Open Academy</strong>,
                     <strong>DIO - Digital Innovation One</strong> e <strong>freeCodeCamp.org</strong> ... etc
                 </p>
+
+                <span class="hero-tag">"Interessado em oportunidades remotass com treinamento corporativo e compromisso
+                    de permanência contratual."</span>
             </div>
         </header>
 
@@ -797,34 +1192,38 @@
                     Stacks Tecnológicas em Desenvolvimento
                 </a>
             </h2>
+            <div class="stack-legend" aria-label="Legenda das categorias de tecnologias">
+                <span class="stack-legend-item stack-category-sistemas">Sistemas</span>
+                <span class="stack-legend-item stack-category-ciberseguranca">Cibersegurança</span>
+                <span class="stack-legend-item stack-category-front-end">Front-end</span>
+            </div>
             <div class="section-group">
-                <h3 class="section-subtitle">Sistemas</h3>
                 <div class="grid-2">
-                    <article class="card">
+                    <article class="card stack-category-sistemas">
                         <a class="stack-card-link" href="pages/cards/linux.html">
                             <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/linux/FCC624" alt=""
+                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/linux/EDBA32" alt=""
                                     aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--linux">Linux <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card stack-category-sistemas">
                         <a class="stack-card-link" href="pages/cards/git.html">
                             <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/git/F05032" alt=""
+                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/git/EDBA32" alt=""
                                     aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--git">Git <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
@@ -833,33 +1232,32 @@
             </div>
 
             <div class="section-group">
-                <h3 class="section-subtitle">Cibersegurança</h3>
                 <div class="grid-2">
-                    <article class="card">
+                    <article class="card stack-category-ciberseguranca">
                         <a class="stack-card-link" href="pages/cards/cybersecurity.html">
                             <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/hackthebox/9FEF00" alt=""
-                                    aria-hidden="true" />
+                                <img class="stack-card-logo stack-card-logo--cybersecurity"
+                                    src="assets/img/img.svg/cybersecurity.svg" alt="" aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--cybersecurity">Cybersecurity <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card stack-category-ciberseguranca">
                         <a class="stack-card-link" href="pages/cards/kali-linux.html">
-                            <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/kalilinux/557C94" alt=""
-                                    aria-hidden="true" />
+                            <div class="stack-card-header stack-card-header--kali">
+                                <img class="stack-card-logo stack-card-logo--kali"
+                                    src="https://cdn.simpleicons.org/kalilinux/70A6DF" alt="" aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--kali">Kali Linux <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
@@ -868,48 +1266,47 @@
             </div>
 
             <div class="section-group">
-                <h3 class="section-subtitle">Front-end</h3>
                 <div class="grid-3">
-                    <article class="card">
+                    <article class="card stack-category-front-end">
                         <a class="stack-card-link" href="pages/cards/html5.html">
                             <div class="stack-card-header">
                                 <img class="stack-card-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt=""
                                     aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--html">HTML <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card stack-category-front-end">
                         <a class="stack-card-link" href="pages/cards/css3.html">
                             <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/css/1572B6" alt=""
+                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/css/E34F26" alt=""
                                     aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--css">CSS3 <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card stack-category-front-end">
                         <a class="stack-card-link" href="pages/cards/javascript.html">
                             <div class="stack-card-header">
-                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt=""
+                                <img class="stack-card-logo" src="https://cdn.simpleicons.org/javascript/E34F26" alt=""
                                     aria-hidden="true" />
                                 <h4>
                                     <span class="stack-card-name stack-card-name--javascript">JavaScript <span
-                                            class="stack-card-hard-skills">Hard Skills<img class="stack-card-arrow-icon"
+                                            class="stack-card-hard-skills"><img class="stack-card-arrow"
                                                 src="assets/img/img.svg/indicator-arrow.svg" alt=""
-                                                aria-hidden="true" /></span></span>
+                                                aria-hidden="true" />Hard Skills</span></span>
                                 </h4>
                             </div>
                         </a>
@@ -918,58 +1315,65 @@
             </div>
         </section>
 
-        <!-- Formação & Trilhas -->
-        <section id="formacao">
+        <!-- Trilhas -->
+        <section id="trilhas">
             <h2 class="section-title">
-                <a class="section-title-link" href="pages/formacao.html">
-                    <img class="section-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
-                    Formação Acadêmica &amp; Trilhas em Tecnologia
+                <a class="section-title-link" href="pages/trilhas.html">
+                    <img class="section-icon" src="assets/img/img.svg/skills.svg" alt="" aria-hidden="true" />
+                    Trilhas em Tecnologia
                 </a>
             </h2>
-            <div class="section-group">
-                <h3 class="section-subtitle">Formação Acadêmica</h3>
-                <div class="grid-2">
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
-                        <h4>Licenciatura em Ciências Sociais</h4>
-                        <p>Universidade Estadual de Londrina (UEL).</p>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/licenciatura-ciencias-sociais.html">Ver +</a>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
-                        <h4>Bacharelado em Teologia</h4>
-                        <p>Instituto Bíblico Maranata (IBM) e Universidade Presbiteriana Mackenzie.</p>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/bacharelado-teologia.html">Ver +</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
 
             <div class="section-group">
                 <h3 class="section-subtitle">Trilhas &amp; Plataformas de Estudo</h3>
-                <div class="grid-2">
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
-                        <h4>Bootcamp Santander Cibersegurança</h4>
-                        <p>DIO - Digital Innovation One e Santander Open Academy.</p>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/bootcamp-santander-ciberseguranca.html">Ver +</a>
-                            <a class="detail-link" href="pages/qualificacoes.html">Ver qualificações</a>
-                        </div>
+                <div class="grid-3">
+                    <article class="card card-compact">
+                        <a class="trail-card-link" href="pages/cards/fundamentos-web-ti.html">
+                            <div class="trail-card-header trail-card-header--freecodecamp">
+                                <h4 class="trail-card-name trail-card-name--freecodecamp">freeCodeCamp</h4>
+                                <img class="trail-card-logo trail-card-logo--freecodecamp"
+                                    src="assets/img/img.svg/freecodecamp.svg" alt="freeCodeCamp" />
+                            </div>
+                        </a>
+                        <a class="trail-card-arrow-link" href="pages/cards/fundamentos-web-ti.html"
+                            aria-label="Ver trilha freeCodeCamp">
+                            <img class="trail-card-arrow" src="assets/img/img.svg/indicator-arrow.svg" alt=""
+                                aria-hidden="true" />
+                        </a>
                     </article>
 
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
-                        <h4>Desenvolvimento Web &amp; Fundamentos de TI</h4>
-                        <p>freeCodeCamp.org e Fundação Bradesco: Escola Virtual.</p>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/fundamentos-web-ti.html">Ver +</a>
-                            <a class="detail-link" href="pages/qualificacoes.html">Ver qualificações</a>
-                        </div>
+                    <article class="card card-compact">
+                        <a class="trail-card-link" href="pages/cards/bootcamp-santander-ciberseguranca.html">
+                            <div class="trail-card-header trail-card-header--dio">
+                                <img class="trail-card-logo trail-card-logo--dio" src="assets/img/img.svg/dio.svg"
+                                    alt="DIO" />
+                                <h4 class="trail-card-name trail-card-name--dio">Digital Innovation One</h4>
+                            </div>
+                        </a>
+                        <a class="trail-card-arrow-link" href="pages/cards/bootcamp-santander-ciberseguranca.html"
+                            aria-label="Ver trilha DIO">
+                            <img class="trail-card-arrow" src="assets/img/img.svg/indicator-arrow.svg" alt=""
+                                aria-hidden="true" />
+                        </a>
+                    </article>
+
+                    <article class="card card-compact">
+                        <a class="trail-card-link" href="pages/cards/bootcamp-santander-ciberseguranca.html">
+                            <div class="trail-card-header">
+                                <img class="trail-card-logo trail-card-logo--santander"
+                                    src="assets/img/img.svg/santander-open-academy.svg" alt="Santander Open Academy" />
+                                <h4 class="trail-card-name trail-card-name--santander">
+                                    <span class="santander-name">Santander</span>
+                                    <span class="santander-divider">|</span>
+                                    <span class="academy-name">Open Academy</span>
+                                </h4>
+                            </div>
+                        </a>
+                        <a class="trail-card-arrow-link" href="pages/cards/bootcamp-santander-ciberseguranca.html"
+                            aria-label="Ver Bootcamp Santander Cibersegurança">
+                            <img class="trail-card-arrow" src="assets/img/img.svg/indicator-arrow.svg" alt=""
+                                aria-hidden="true" />
+                        </a>
                     </article>
                 </div>
             </div>
@@ -979,53 +1383,42 @@
         <section id="projetos">
             <h2 class="section-title">
                 <a class="section-title-link" href="pages/projetos.html">
-                    <img class="section-icon" src="assets/img/img.svg/project.svg" alt="" aria-hidden="true" />
+                    <img class="section-icon section-icon--project" src="assets/img/img.svg/project-tools.svg" alt=""
+                        aria-hidden="true" />
                     Projetos em Desenvolvimento
                 </a>
             </h2>
             <div class="section-group">
                 <h3 class="section-subtitle">Projetos em desenvolvimento</h3>
                 <div class="grid-2">
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/project.svg" alt="" aria-hidden="true" />
-                        <h4>cybersecurity-lab-dio</h4>
-                        <p>
-                            Repositório principal com registro de laboratórios práticos, análises e desafios na área de
-                            Cibersegurança e Redes.
-                        </p>
-                        <div class="project-meta">
-                            <span class="pill highlight">Cibersegurança &amp; Redes</span>
-                            <span class="pill">Bootcamp Santander Cibersegurança</span>
-                            <span class="pill">DIO / Santander Open Academy</span>
-                        </div>
-                        <a class="btn-link" href="https://github.com/SamuelssNeto/cybersecurity-lab-dio" target="_blank"
-                            rel="noopener noreferrer">
-                            Acessar repositório no GitHub →
+                    <article class="card card-compact">
+                        <a class="project-card-link" href="pages/cards/cybersecurity-lab-dio.html">
+                            <div class="project-card-header">
+                                <img class="project-card-logo" src="assets/img/img.svg/dio-cybersecurity.svg" alt=""
+                                    aria-hidden="true" />
+                                <h4 class="project-card-name">Cybersecurity-Lab-Dio</h4>
+                            </div>
                         </a>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/cybersecurity-lab-dio.html">Ver +</a>
-                        </div>
+                        <a class="trail-card-arrow-link" href="pages/cards/cybersecurity-lab-dio.html"
+                            aria-label="Ver projeto cybersecurity-lab-dio">
+                            <img class="trail-card-arrow" src="assets/img/img.svg/indicator-arrow.svg" alt=""
+                                aria-hidden="true" />
+                        </a>
                     </article>
 
-                    <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/project.svg" alt="" aria-hidden="true" />
-                        <h4>Projetos Web Front-end (em construção)</h4>
-                        <p>
-                            Próximos projetos aplicados de desenvolvimento Web consolidando HTML5, CSS3, JavaScript e
-                            boas práticas de interface.
-                        </p>
-                        <div class="project-meta">
-                            <span class="pill highlight">Front-end</span>
-                            <span class="pill">Formação Front-end</span>
-                            <span class="pill">Projeto pessoal</span>
-                        </div>
-                        <a class="btn-link" href="https://github.com/SamuelssNeto" target="_blank"
-                            rel="noopener noreferrer">
-                            Acompanhar atualizações no GitHub →
+                    <article class="card card-compact">
+                        <a class="project-card-link" href="pages/cards/projetos-web-frontend.html">
+                            <div class="project-card-header">
+                                <img class="project-card-logo" src="assets/img/img.svg/coding-loop.svg" alt=""
+                                    aria-hidden="true" />
+                                <h4 class="project-card-name">Coding-Loop</h4>
+                            </div>
                         </a>
-                        <div class="detail-links">
-                            <a class="detail-link" href="pages/cards/projetos-web-frontend.html">Ver +</a>
-                        </div>
+                        <a class="trail-card-arrow-link" href="pages/cards/projetos-web-frontend.html"
+                            aria-label="Ver projetos Web Front-end">
+                            <img class="trail-card-arrow" src="assets/img/img.svg/indicator-arrow.svg" alt=""
+                                aria-hidden="true" />
+                        </a>
                     </article>
                 </div>
             </div>
@@ -1035,7 +1428,7 @@
         <section id="competencias">
             <h2 class="section-title">
                 <a class="section-title-link" href="pages/competencias.html">
-                    <img class="section-icon" src="assets/img/img.svg/skills.svg" alt="" aria-hidden="true" />
+                    <img class="section-icon" src="assets/img/img.svg/training.svg" alt="" aria-hidden="true" />
                     Competências &amp; Diferenciais
                 </a>
             </h2>
@@ -1044,39 +1437,39 @@
                 software e à segurança da informação:
             </p>
             <div class="section-group">
-                <h3 class="section-subtitle">Competências profissionais</h3>
+
                 <div class="grid-3">
                     <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/skills.svg" alt="" aria-hidden="true" />
+                        <img class="card-icon" src="assets/img/img.svg/star.svg" alt="" aria-hidden="true" />
                         <h4>Pensamento Analítico e Crítico</h4>
                         <p>
-                            Capacidade de investigar problemas complexos sob múltiplas perspectivas antes de propor
+                            Capacidade de investigar problemas sob múltiplas perspectivas antes de propor
                             soluções técnicas.
                         </p>
-                        <div class="detail-links">
+                        <!-- <div class="detail-links">
                             <a class="detail-link" href="pages/cards/pensamento-analitico.html">Ver +</a>
-                        </div>
+                        </div> -->
                     </article>
 
                     <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/skills.svg" alt="" aria-hidden="true" />
-                        <h4>Comunicação Clara e Estruturada</h4>
-                        <p>Facilidade para documentar processos, escrever relatórios técnicos e colaborar em equipe.</p>
-                        <div class="detail-links">
+                        <img class="card-icon" src="assets/img/img.svg/star.svg" alt="" aria-hidden="true" />
+                        <h4>Facilidade em Comunicação </h4>
+                        <p>Capacidade de documentar processos, escrever relatórios técnicos e colaborar em equipe.</p>
+                        <!-- <div class="detail-links">
                             <a class="detail-link" href="pages/cards/comunicacao-clara.html">Ver +</a>
-                        </div>
+                        </div> -->
                     </article>
 
                     <article class="card">
-                        <img class="card-icon" src="assets/img/img.svg/skills.svg" alt="" aria-hidden="true" />
+                        <img class="card-icon" src="assets/img/img.svg/star.svg" alt="" aria-hidden="true" />
                         <h4>Ética e Responsabilidade</h4>
                         <p>
                             Compromisso com boas práticas, privacidade de dados e segurança desde a concepção dos
                             projetos.
                         </p>
-                        <div class="detail-links">
+                        <!-- <div class="detail-links">
                             <a class="detail-link" href="pages/cards/etica-responsabilidade.html">Ver +</a>
-                        </div>
+                        </div> -->
                     </article>
                 </div>
             </div>
@@ -1086,19 +1479,19 @@
         <section id="contato">
             <h2 class="section-title">
                 <img class="section-icon" src="assets/img/img.svg/contact.svg" alt="" aria-hidden="true" />
-                Canais de Contato
+                Contato
             </h2>
             <div class="contact-actions">
                 <a class="btn-contact" href="mailto:samuelssneto@gmail.com" aria-label="Enviar e-mail para Samuel">
                     <img class="btn-icon" src="assets/img/img.svg/gmail.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a class="btn-contact" href="https://www.linkedin.com/in/samuelssneto" target="_blank"
+                <a class="btn-contact btn-contact--linkedin" href="https://www.linkedin.com/in/samuelssneto" target="_blank"
                     rel="noopener noreferrer" aria-label="Perfil de Samuel no LinkedIn">
-                    <img class="btn-icon" src="assets/img/img.svg/linkedin.svg" alt="" aria-hidden="true" />
+                    <img class="btn-icon-linkedin" src="assets/img/img.svg/linkedin.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a class="btn-contact" href="https://github.com/SamuelssNeto" target="_blank" rel="noopener noreferrer"
+                <a class="btn-contact" href="https://samuelssneto.github.io/" target="_blank" rel="noopener noreferrer"
                     aria-label="Perfil de Samuel no GitHub">
                     <img class="btn-icon github-icon" src="assets/img/img.svg/github.svg" alt="" aria-hidden="true" />
                 </a>
@@ -1134,39 +1527,6 @@
             document.querySelector(`${sectionSelector}.section-expanded`)
                 ?.classList.remove("section-expanded");
         };
-
-        const compactCards = [...document.querySelectorAll("main section[id] .card")];
-        let compactCardsFrame = 0;
-
-        const applyCompactHeights = () => {
-            compactCardsFrame = 0;
-            compactCards.forEach((card) => {
-                card.classList.remove("card-compact");
-                card.style.removeProperty("--card-natural-height");
-            });
-
-            const naturalHeights = compactCards.map((card) => (
-                card.getBoundingClientRect().height
-            ));
-
-            compactCards.forEach((card, index) => {
-                card.style.setProperty(
-                    "--card-natural-height",
-                    `${naturalHeights[index]}px`
-                );
-                card.classList.add("card-compact");
-            });
-        };
-
-        const scheduleCompactHeightUpdate = () => {
-            if (compactCardsFrame) {
-                cancelAnimationFrame(compactCardsFrame);
-            }
-            compactCardsFrame = requestAnimationFrame(applyCompactHeights);
-        };
-
-        applyCompactHeights();
-        window.addEventListener("resize", scheduleCompactHeightUpdate, { passive: true });
 
         let manualScrollInProgress = false;
         let settleTimer = null;
@@ -1209,6 +1569,15 @@
             const about = document.getElementById("sobre");
             if (about && about.getBoundingClientRect().bottom > navBottom + 20) {
                 replaceCurrentHash("#sobre");
+                return;
+            }
+
+            const contact = document.getElementById("contato");
+            const isAtPageBottom =
+                window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+            if (isAtPageBottom && contact instanceof HTMLElement) {
+                replaceCurrentHash("#contato");
+                navigateToHash("#contato");
                 return;
             }
 
